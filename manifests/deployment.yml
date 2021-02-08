@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: "gustavakstesla-c5fe"
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: "gustavakstesla-c5fe"
+  template:
+    metadata:
+      labels:
+        app: "gustavakstesla-c5fe"
+    spec:
+      containers:
+        - name: "gustavakstesla-c5fe"
+          image: "gustavacr01.azurecr.io/gustavakstesla"
+          ports:
+          - containerPort: 25565
