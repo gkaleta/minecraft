@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: gustav-minecraft
+  namespace: namespace-workflow-1743513529064
+  labels:
+    app.kubernetes.io/name: gustav-minecraft
+    kubernetes.azure.com/generator: devhub
+spec:
+  type: LoadBalancer
+  selector:
+    app.kubernetes.io/name: gustav-minecraft
+  ports:
+    - protocol: TCP
+      port: 25565
+      targetPort: 25565
