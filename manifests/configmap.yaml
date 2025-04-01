@@ -1,0 +1,9 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: gustav-minecraft-config
+  namespace: namespace-workflow-1743513529064
+  labels:
+    app.kubernetes.io/name: gustav-minecraft
+    kubernetes.azure.com/generator: devhub
+data:
